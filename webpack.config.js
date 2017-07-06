@@ -69,7 +69,11 @@ module.exports = function (env) {
     plugins: plugins,
     resolve: {
       alias: {
-        App: path.resolve(__dirname, 'src/')
+        App: path.resolve(__dirname, 'src'),
+        Components: path.resolve(__dirname, 'src', 'components'),
+        Containers: path.resolve(__dirname, 'src', 'containers'),
+        Actions: path.resolve(__dirname, 'src', 'actions'),
+        Reducers: path.resolve(__dirname, 'src', 'reducers')
       },
       extensions: ['.js', '.css', '*'],
       modules: [path.resolve(__dirname, 'src'), 'node_modules']
