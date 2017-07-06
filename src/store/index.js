@@ -14,7 +14,7 @@ const configureStore = (initialState = {}) => {
 
   const store = createStoreWithMiddleware(rootReducer, initialState)
 
-  assignAll(actions, store)
+  //assignAll(actions, store)
 
   return store
 }

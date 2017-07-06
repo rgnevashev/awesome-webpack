@@ -1,4 +1,5 @@
 import React from 'react'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { add, increment, decrement } from 'Actions'
@@ -9,9 +10,5 @@ export default connect(
   state => ({
     counter: state.counter
   }),
-  dispatch => ({
-    add,
-    increment,
-    decrement
-  })
+  dispatch => bindActionCreators({ add, increment, decrement }, dispatch)
 )(App)
